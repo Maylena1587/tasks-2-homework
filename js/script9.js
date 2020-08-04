@@ -43,7 +43,7 @@ function addLogin(allLogins, login) {
   if (isLoginValid(login) !== true) {
     message = ERROR;
     return message;
-  } else if (isLoginUnique(allLogins, login) !== true) {
+  } else if (!isLoginUnique(allLogins, login)) {
     message = REFUSAL;
     return message;
   } else {
